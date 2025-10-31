@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products - Digital Store</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="/">Creative Store</a></h1>
+    <nav><a href="/">Home</a> <a id="cart-link" href="#">Cart (0)</a></nav>
+  </header>
+
+  <main class="container">
+    <h2>Products</h2>
+    <div id="product-grid" class="grid"></div>
+    <div class="cart-panel" id="cart-panel">
+      <h3>Your Cart</h3>
+      <div id="cart-items"></div>
+      <div id="cart-total"></div>
+      <button id="checkout-btn" class="btn">Checkout</button>
+    </div>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

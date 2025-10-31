@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates - DigitalHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">💡 DigitalHub</div>
+    <!-- Include the same navbar dropdown here -->
+  </header>
+
+  <main class="container">
+    <h1>Templates</h1>
+    <p>Explore professional and ready-to-use templates for your business, social media, and more.</p>
+    <div id="product-grid" class="grid"></div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    // Example: render only templates category
+    const TEMPLATES = PRODUCTS.filter(p => p.id.includes('template'));
+    const container = document.getElementById('product-grid');
+    container.innerHTML = TEMPLATES.map(p => `
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400?text=${encodeURIComponent(p.name)}" alt="${p.name}">
+        <h4>${p.name}</h4>
+        <p>${p.price_label}</p>
+        <button class="btn primary" onclick="addToCart('${p.id}')">Add to Cart</button>
+      </div>
+    `).join('');
+  </script>
+</body>
+</html>
